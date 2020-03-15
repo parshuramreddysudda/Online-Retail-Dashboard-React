@@ -1,4 +1,3 @@
-# Online-Retail-Dashboard-React
 # Online Retail Dashboard using React, Prism, Amcharts, & Boostrap
 
 
