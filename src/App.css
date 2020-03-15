@@ -1,0 +1,26 @@
+.darkCard{
+    background: #202a3b!important;
+    color: white!important;
+}
+.darkBack{
+    background: #17202e!important;
+    color: white!important;
+}
+.cardTitleDark{
+    color: #8091ab;
+}
+.card-title{
+    margin-bottom:  0px !important;
+    padding-top: 1em!important;
+    padding-left: 2em!important;
+}
+.borderLR{
+    border-left: 1px solid hsla(0,0%,100%,.1)!important;
+    border-right: 1px solid hsla(0,0%,100%,.1)!important;
+}
+.fullHeight{
+    height: 100%;
+}
+.card-text{
+    padding-left: 0.9em!important;
+}

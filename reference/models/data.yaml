@@ -1,0 +1,32 @@
+  
+openapi: 3.0.0
+info:
+  title: Flight List and Numbers
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /data:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              examples:
+                checked-in-passenger:
+                  value:
+                    total: AIR_INDIA1
+                    comp1: F2GLK5
+                    comp2: AIR_INDIA2
+                    comp3: F2GLK5
+                    comp4: AIR_INDIA3
+                    compView: F2GLK5
+                    purRate: AIR_INDIA4
+                    checRate: F2GLK5
+                    aRate: AIR_INDIA5
+                  
+              schema:
+                $ref: /reference/models/dataConfig.yaml

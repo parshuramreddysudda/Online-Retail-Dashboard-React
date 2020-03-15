@@ -1,0 +1,39 @@
+title: Flight
+type: object
+properties:
+  total:
+    type: string
+    example: 3823K
+    pattern: '^[1-9][1-9][1-9][1-9][K]$'
+  comp1:
+    type: string
+    example: 382K
+    pattern: '^[1-9][1-9][1-9][K]$'
+  comp2:
+    type: string
+    example: 382K
+    pattern: '^[1-9][1-9][1-9][K]$'
+  comp3:
+    type: string
+    example: 382K
+    pattern: '^[1-9][1-9][1-9][K]$'
+  comp4:
+    type: string
+    example: 382K
+    pattern: '^[1-9][1-9][1-9][K]$'
+  compView:
+    type: string
+    example: 382K
+    pattern: '^[1-9][1-9][1-9][K]$'
+  purRate:
+    type: string
+    example: '38'
+    pattern: '^[1-9][1-9]$'
+  checRate:
+    type: string
+    example: '38'
+    pattern: '^[1-9][1-9]$'
+  aRate:
+    type: string
+    example: '38'
+    pattern: '^[1-9][1-9]$'

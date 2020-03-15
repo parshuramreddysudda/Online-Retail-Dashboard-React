@@ -1,0 +1,75 @@
+## --------------------
+## DON'T EDIT THIS FILE
+## --------------------
+## Engine: yamlinc@0.1.10
+## Source: reference/masterYaml.yaml
+
+openapi: 3.0.0
+info:
+  title: Flight List and Numbers
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /data:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              examples:
+                checked-in-passenger:
+                  value:
+                    total: AIR_INDIA1
+                    comp1: F2GLK5
+                    comp2: AIR_INDIA2
+                    comp3: F2GLK5
+                    comp4: AIR_INDIA3
+                    compView: F2GLK5
+                    purRate: AIR_INDIA4
+                    checRate: F2GLK5
+                    aRate: AIR_INDIA5
+              schema:
+                $ref: /reference/models/dataConfig.yaml
+title: Flight
+type: object
+properties:
+  total:
+    type: string
+    example: 3823K
+    pattern: '^[1-9][1-9][1-9][1-9][K]$'
+  comp1:
+    type: string
+    example: 382K
+    pattern: '^[1-9][1-9][1-9][K]$'
+  comp2:
+    type: string
+    example: 382K
+    pattern: '^[1-9][1-9][1-9][K]$'
+  comp3:
+    type: string
+    example: 382K
+    pattern: '^[1-9][1-9][1-9][K]$'
+  comp4:
+    type: string
+    example: 382K
+    pattern: '^[1-9][1-9][1-9][K]$'
+  compView:
+    type: string
+    example: 382K
+    pattern: '^[1-9][1-9][1-9][K]$'
+  purRate:
+    type: string
+    example: '38'
+    pattern: '^[1-9][1-9]$'
+  checRate:
+    type: string
+    example: '38'
+    pattern: '^[1-9][1-9]$'
+  aRate:
+    type: string
+    example: '38'
+    pattern: '^[1-9][1-9]$'
