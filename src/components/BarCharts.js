@@ -37,7 +37,7 @@ export default class amcharts extends React.Component {
 
         let categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
         categoryAxis.dataFields.category = "name";
-        categoryAxis.stroke=am4core.color("white");  //Label color of Company
+        categoryAxis.stroke=am4core.color("#fff");  //Label color of Company
         categoryAxis.renderer.grid.template.strokeOpacity = 0;
         categoryAxis.renderer.minGridDistance = 10;
         categoryAxis.renderer.labels.template.dx = -40;

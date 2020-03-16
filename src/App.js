@@ -3,12 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Paper from '@material-ui/core/Paper';
 import '../src/App.css';
-import * as am4core from "@amcharts/amcharts4/core";
-import * as am4charts from "@amcharts/amcharts4/charts";
-import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 import Barchart from '../src/components/BarCharts';
 import Donut from  '../src/components/Donut';
 import Circle from 'react-circle';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 
@@ -60,7 +58,7 @@ export default class Index extends React.Component {
             <div className='col-md-3'>
               <Paper className="darkCard">
                 <div className='card-title cardTitleDark' style={main}>
-                Revenue from Amazon
+                <p className=''>Revenue from Amazon  </p><FontAwesomeIcon icon={['fab','aaple']}></FontAwesomeIcon>
 
                 </div>
                 <div className='card-text' style={prize}>

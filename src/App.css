@@ -24,3 +24,6 @@
 .card-text{
     padding-left: 0.9em!important;
 }
+.compPosition{
+    position: absolute;
+}

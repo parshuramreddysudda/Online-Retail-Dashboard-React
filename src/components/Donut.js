@@ -23,8 +23,6 @@ export default class amcharts extends React.Component {
         // Let's cut a hole in our Pie chart the size of 30% the radius
         chart.innerRadius = am4core.percent(30);
         pieSeries.labels.template.fill = am4core.color("white");
-        pieSeries.tooltip.label.fill = am4core.color("red");
-
 
         // Put a thick white border around each Slice
         pieSeries.slices.template.stroke = am4core.color("#fff");
@@ -43,7 +41,7 @@ export default class amcharts extends React.Component {
 
         pieSeries.alignLabels = false;
         pieSeries.labels.template.bent = true;
-        pieSeries.labels.template.radius = 3;
+        pieSeries.labels.template.radius = -10;
         pieSeries.labels.template.padding(0, 0, 0, 0);
 
         pieSeries.ticks.template.disabled = true;
@@ -62,6 +60,10 @@ export default class amcharts extends React.Component {
 
         // Add a legend
         chart.legend = new am4charts.Legend();
+
+        // Apply this Below line of Code for Changing colors for Pie chart Description
+        chart.legend.labels.template.fill = am4core.color("#fff");
+        chart.legend.valueLabels.template.fill = am4core.color("#fff"); 
 
         chart.data = [{
             "country": "Lithuania",
