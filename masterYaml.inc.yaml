@@ -23,15 +23,18 @@ paths:
               examples:
                 checked-in-passenger:
                   value:
-                    total: AIR_INDIA1
-                    comp1: F2GLK5
-                    comp2: AIR_INDIA2
-                    comp3: F2GLK5
-                    comp4: AIR_INDIA3
-                    compView: F2GLK5
-                    purRate: AIR_INDIA4
-                    checRate: F2GLK5
-                    aRate: AIR_INDIA5
+                    total: 7744k
+                    comp1: 262k
+                    comp2: 739k
+                    comp3: 850K
+                    comp4: 946K
+                    compView: 86.9K
+                    purRate: '86'
+                    checRate: '36'
+                    aRate: '67'
+                    amazon: '897'
+                    flip: '837'
+                    ebay: '894'
               schema:
                 $ref: /reference/models/dataConfig.yaml
 title: Flight
@@ -42,34 +45,46 @@ properties:
     example: 3823K
     pattern: '^[1-9][1-9][1-9][1-9][K]$'
   comp1:
-    type: string
-    example: 382K
+    type: int
+    example: 382
     pattern: '^[1-9][1-9][1-9][K]$'
   comp2:
-    type: string
-    example: 382K
+    type: int
+    example: 382
     pattern: '^[1-9][1-9][1-9][K]$'
   comp3:
-    type: string
-    example: 382K
+    type: int
+    example: 382
     pattern: '^[1-9][1-9][1-9][K]$'
   comp4:
     type: string
-    example: 382K
-    pattern: '^[1-9][1-9][1-9][K]$'
+    example: 38.2K
+    pattern: '^[1-9][1-9][.][1-9][K]$'
   compView:
     type: string
-    example: 382K
-    pattern: '^[1-9][1-9][1-9][K]$'
+    example: 38.2K
+    pattern: '^[1-9][1-9][.][1-9][K]$'
   purRate:
     type: string
     example: '38'
-    pattern: '^[1-9][1-9]$'
+    pattern: '^[0-9][0-9]$'
   checRate:
     type: string
     example: '38'
-    pattern: '^[1-9][1-9]$'
+    pattern: '^[0-9][0-9]$'
   aRate:
     type: string
     example: '38'
-    pattern: '^[1-9][1-9]$'
+    pattern: '^[0-9][0-9]$'
+  amazon:
+    type: string
+    example: 38.2K
+    pattern: '^[1-9][1-9][.][1-9][K]$'
+  flip:
+    type: string
+    example: 38.2K
+    pattern: '^[1-9][1-9][.][1-9][K]$'
+  ebay:
+    type: string
+    example: 38.2K
+    pattern: '^[1-9][1-9][.][1-9][K]$'

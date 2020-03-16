@@ -66,17 +66,17 @@ export default class amcharts extends React.Component {
         chart.legend.valueLabels.template.fill = am4core.color("#fff"); 
 
         chart.data = [{
-            "country": "Lithuania",
-            "litres": 501.9,
+            "country": "Amazon",
+            "litres": parseInt(this.props.amazon),
             "color": am4core.color("red"),
         }, {
-            "country": "Germany",
+            "country": "Ebay",
             "color": am4core.color("green"),
-            "litres": 165.8
+            "litres": parseInt(this.props.ebay),
         }, {
-            "country": "Australia",
+            "country": "Flipkart",
             "color": am4core.color("blue"),
-            "litres": 139.9
+            "litres": parseInt(this.props.flip),
         }];
 
 
@@ -96,7 +96,7 @@ export default class amcharts extends React.Component {
 
         return (
             <div>
-                <h3 className='text-center'>Amchart </h3>
+                <h5 className='text-center' style={{color:'rgb(128, 145, 171)',paddingTop:'0.8em'}}>Order Trends  By Region</h5>
                 <div id='donut' style={{ width: "auto", height: '500px' }}></div>
 
 

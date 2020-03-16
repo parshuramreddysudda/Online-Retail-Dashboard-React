@@ -6,34 +6,46 @@ properties:
     example: 3823K
     pattern: '^[1-9][1-9][1-9][1-9][K]$'
   comp1:
-    type: string
-    example: 382K
+    type: int
+    example: 382
     pattern: '^[1-9][1-9][1-9][K]$'
   comp2:
-    type: string
-    example: 382K
+    type: int
+    example: 382
     pattern: '^[1-9][1-9][1-9][K]$'
   comp3:
-    type: string
-    example: 382K
+    type: int
+    example: 382
     pattern: '^[1-9][1-9][1-9][K]$'
   comp4:
     type: string
-    example: 382K
-    pattern: '^[1-9][1-9][1-9][K]$'
+    example: 38.2K
+    pattern: '^[1-9][1-9][.][1-9][K]$'
   compView:
     type: string
-    example: 382K
-    pattern: '^[1-9][1-9][1-9][K]$'
+    example: 38.2K
+    pattern: '^[1-9][1-9][.][1-9][K]$'
   purRate:
     type: string
     example: '38'
-    pattern: '^[1-9][1-9]$'
+    pattern: '^[0-9][0-9]$'
   checRate:
     type: string
     example: '38'
-    pattern: '^[1-9][1-9]$'
+    pattern: '^[0-9][0-9]$'
   aRate:
     type: string
     example: '38'
-    pattern: '^[1-9][1-9]$'
+    pattern: '^[0-9][0-9]$'
+  amazon:
+     type: string
+     example: 38.2K
+     pattern: '^[1-9][1-9][.][1-9][K]$'
+  flip:
+     type: string
+     example: 38.2K
+     pattern: '^[1-9][1-9][.][1-9][K]$'
+  ebay:
+     type: string
+     example: 38.2K
+     pattern: '^[1-9][1-9][.][1-9][K]$'

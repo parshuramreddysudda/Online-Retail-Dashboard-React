@@ -18,15 +18,18 @@ paths:
               examples:
                 checked-in-passenger:
                   value:
-                    total: AIR_INDIA1
-                    comp1: F2GLK5
-                    comp2: AIR_INDIA2
-                    comp3: F2GLK5
-                    comp4: AIR_INDIA3
-                    compView: F2GLK5
-                    purRate: AIR_INDIA4
-                    checRate: F2GLK5
-                    aRate: AIR_INDIA5
+                    total: 7744k
+                    comp1: 262k
+                    comp2: 739k
+                    comp3: 850K
+                    comp4: 946K
+                    compView: 86.9K
+                    purRate: '86'
+                    checRate: '36'
+                    aRate: '67'
+                    amazon: '897'
+                    flip: '837'
+                    ebay: '894'
                   
               schema:
                 $ref: /reference/models/dataConfig.yaml

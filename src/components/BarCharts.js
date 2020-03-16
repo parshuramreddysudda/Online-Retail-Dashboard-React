@@ -9,7 +9,11 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 
 export default class amcharts extends React.Component {
 
-
+ 
+    state = {
+        amazon: this.props.amazon
+      }
+    
     componentDidMount=()=> {
 
         am4core.useTheme(am4themes_dataviz);
@@ -23,15 +27,15 @@ export default class amcharts extends React.Component {
 
         chart.data = [{
             "name": "Amazon",
-            "steps": 45688,
+            "steps": parseInt(this.state.amazon),
             "href": "https://cdn3.iconfinder.com/data/icons/cute-flat-social-media-icons-3/512/amazon.png"
         }, {
             "name": "Ebay",
-            "steps": 35781,
+            "steps": parseInt(this.props.ebay),
             "href": "https://lh3.googleusercontent.com/proxy/mIrIZgLqebK_MzC4GAJ9wkiKXMOFVAdbOq0QVWKfHJ6HDAOvy5OYaaCLEfqK3h-SWQlQ-DvWlGEE7bTnpcJhOHHVFd179_tgkPFQH_Ivz3JYrhKxMlXxuhhFDkOaGRYSdQcq56I"
         }, {
             "name": "Flipkart",
-            "steps": 11561,
+            "steps": parseInt(this.props.flip),
             "href": "https://cdn.icon-icons.com/icons2/729/PNG/512/flipkart_icon-icons.com_62718.png"
         }];
 
@@ -143,8 +147,8 @@ export default class amcharts extends React.Component {
     render() {
 
         return (
-            <div>
-                 <h3 className='text-center'>Amchart </h3>
+            <div>  {parseInt(this.props.amazon)}
+                 <h5 className='text-center' style={{color:'rgb(128, 145, 171)',paddingTop:'0.8em'}}>Orders Trend  By Stores </h5>
                    <div id='barChart' style={{width:"auto",height:'500px'}}></div>
 
 
