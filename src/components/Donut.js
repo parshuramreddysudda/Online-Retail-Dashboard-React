@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
@@ -6,9 +6,37 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 
 export default class amcharts extends React.Component {
 
+      
+constructor(props) {
+    super(props);
+    this.state={ama:this.props.amazon}
+    console.log(this.props.amazon);
+     this.state={newAmazon:'435',
+    previousState:"non"};
+}
+ 
+    componentDidMount () {
 
-    componentDidMount() {
+     this.Runamcharts();
+     
+    }
 
+   componentDidUpdate(previousState) {
+    if (previousState !== this.props.amazon) {
+      this.Runamcharts();
+    }
+  }
+
+
+
+    componentWillUnmount() {
+        if (this.chart) {
+            this.chart.dispose();
+        }
+        
+        this.previousState=this.state.props.amazon
+    }
+    Runamcharts(){
 
         am4core.useTheme(am4themes_animated);
        
@@ -17,8 +45,8 @@ export default class amcharts extends React.Component {
 
         // Add and configure Series
         let pieSeries = chart.series.push(new am4charts.PieSeries());
-        pieSeries.dataFields.value = "litres";
-        pieSeries.dataFields.category = "country";
+        pieSeries.dataFields.value = "stocks";
+        pieSeries.dataFields.category = "company";
 
         // Let's cut a hole in our Pie chart the size of 30% the radius
         chart.innerRadius = am4core.percent(30);
@@ -66,36 +94,30 @@ export default class amcharts extends React.Component {
         chart.legend.valueLabels.template.fill = am4core.color("#fff"); 
 
         chart.data = [{
-            "country": "Amazon",
-            "litres": parseInt(this.props.amazon),
+            "company": "Amazon",
+            "stocks": this.props.amazon,
             "color": am4core.color("red"),
         }, {
-            "country": "Ebay",
+            "company": "Ebay",
             "color": am4core.color("green"),
-            "litres": parseInt(this.props.ebay),
+            "stocks": this.props.ebay,
         }, {
-            "country": "Flipkart",
+            "company": "Flipkart",
             "color": am4core.color("blue"),
-            "litres": parseInt(this.props.flip),
+            "stocks": this.props.flip,
         }];
-
-
-
 
         this.chart = chart;
     }
-
-    componentWillUnmount() {
-        if (this.chart) {
-            this.chart.dispose();
-        }
-    }
-
+   
 
     render() {
 
+        // this.setState({ama:this.props.amazon});
         return (
+            
             <div>
+                { console.log(this.props.amazon)}
                 <h5 className='text-center' style={{color:'rgb(128, 145, 171)',paddingTop:'0.8em'}}>Order Trends  By Region</h5>
                 <div id='donut' style={{ width: "auto", height: '500px' }}></div>
 

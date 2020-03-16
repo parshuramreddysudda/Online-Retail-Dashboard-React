@@ -8,15 +8,15 @@ properties:
   comp1:
     type: int
     example: 382
-    pattern: '^[1-9][1-9][1-9][K]$'
+    pattern: '^[1-9][1-9][1-9]$'
   comp2:
     type: int
     example: 382
-    pattern: '^[1-9][1-9][1-9][K]$'
+    pattern: '^[1-9][1-9][1-9]$'
   comp3:
     type: int
     example: 382
-    pattern: '^[1-9][1-9][1-9][K]$'
+    pattern: '^[1-9][1-9][1-9]$'
   comp4:
     type: string
     example: 38.2K

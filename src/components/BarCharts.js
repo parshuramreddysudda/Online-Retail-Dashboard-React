@@ -10,11 +10,36 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 export default class amcharts extends React.Component {
 
  
-    state = {
-        amazon: this.props.amazon
+    constructor(props) {
+        super(props);
+        this.state={ama:this.props.amazon}
+        console.log(this.props.amazon);
+         this.state={newAmazon:'435',
+        previousState:"non"};
+    }
+     
+        componentDidMount () {
+    
+         this.Runamcharts();
+         
+        }
+    
+       componentDidUpdate(previousState) {
+        if (previousState !== this.props.amazon) {
+          this.Runamcharts();
+        }
       }
     
-    componentDidMount=()=> {
+    
+    
+        componentWillUnmount() {
+            if (this.chart) {
+                this.chart.dispose();
+            }
+            
+            this.previousState=this.state.props.amazon
+        }
+        Runamcharts(){
 
         am4core.useTheme(am4themes_dataviz);
         am4core.useTheme(am4themes_animated);
@@ -27,12 +52,12 @@ export default class amcharts extends React.Component {
 
         chart.data = [{
             "name": "Amazon",
-            "steps": parseInt(this.state.amazon),
+            "steps": parseInt(this.props.amazon),
             "href": "https://cdn3.iconfinder.com/data/icons/cute-flat-social-media-icons-3/512/amazon.png"
         }, {
             "name": "Ebay",
             "steps": parseInt(this.props.ebay),
-            "href": "https://lh3.googleusercontent.com/proxy/mIrIZgLqebK_MzC4GAJ9wkiKXMOFVAdbOq0QVWKfHJ6HDAOvy5OYaaCLEfqK3h-SWQlQ-DvWlGEE7bTnpcJhOHHVFd179_tgkPFQH_Ivz3JYrhKxMlXxuhhFDkOaGRYSdQcq56I"
+            "href": "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/ebay-512.png"
         }, {
             "name": "Flipkart",
             "steps": parseInt(this.props.flip),
