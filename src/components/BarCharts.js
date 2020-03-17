@@ -12,8 +12,6 @@ export default class amcharts extends React.Component {
  
     constructor(props) {
         super(props);
-        this.state={ama:this.props.amazon}
-        console.log(this.props.amazon);
          this.state={newAmazon:'435',
         previousState:"non"};
     }
@@ -28,6 +26,7 @@ export default class amcharts extends React.Component {
         if (previousState !== this.props.amazon) {
           this.Runamcharts();
         }
+        
       }
     
     
@@ -172,7 +171,7 @@ export default class amcharts extends React.Component {
     render() {
 
         return (
-            <div>  {parseInt(this.props.amazon)}
+            <div> 
                  <h5 className='text-center' style={{color:'rgb(128, 145, 171)',paddingTop:'0.8em'}}>Orders Trend  By Stores </h5>
                    <div id='barChart' style={{width:"auto",height:'500px'}}></div>
 

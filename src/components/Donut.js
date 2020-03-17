@@ -9,8 +9,7 @@ export default class amcharts extends React.Component {
       
 constructor(props) {
     super(props);
-    this.state={ama:this.props.amazon}
-    console.log(this.props.amazon);
+ 
      this.state={newAmazon:'435',
     previousState:"non"};
 }
@@ -25,6 +24,7 @@ constructor(props) {
     if (previousState !== this.props.amazon) {
       this.Runamcharts();
     }
+    
   }
 
 
@@ -117,7 +117,7 @@ constructor(props) {
         return (
             
             <div>
-                { console.log(this.props.amazon)}
+               
                 <h5 className='text-center' style={{color:'rgb(128, 145, 171)',paddingTop:'0.8em'}}>Order Trends  By Region</h5>
                 <div id='donut' style={{ width: "auto", height: '500px' }}></div>
 
