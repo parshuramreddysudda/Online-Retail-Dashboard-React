@@ -60,7 +60,7 @@ export default class amcharts extends React.Component {
         }, {
             "name": "Flipkart",
             "steps": parseInt(this.props.flip),
-            "href": "https://cdn.icon-icons.com/icons2/729/PNG/512/flipkart_icon-icons.com_62718.png"
+            "href": "https://www.dherbal.in/wp-content/uploads/2018/02/Flipkart-logo.png"
         }];
 
         let categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
